@@ -26,6 +26,6 @@ Route::prefix('login')->group(function () {
     })->name('adminLogin');
 });
 
-Route::get('employee', function () {
-    return view('employee.index');
+Route::get('dashboard', function () {
+    return view('employee.dashboard');
 });
