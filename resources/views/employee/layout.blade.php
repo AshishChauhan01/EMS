@@ -7,9 +7,9 @@
             </div>
             <div class="side-menu">
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
-                    <li class="has-child active"><a href="#"><i class="fa-solid fa-building"></i>Department</a>
-                        <ul>
+                    <li class="{{($page == 'dashboard')?'active':'';}}"><a href="{{url('employee/dashboard')}}"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+                    <li class="has-child {{($page == 'department')?'active':'';}}"><a href="{{url('employee/department')}}"><i class="fa-solid fa-building"></i>Department</a>
+                        <ul class="d-none">
                             <li><a href="#">Department 1</a></li>
                             <li><a href="#">Department 2</a></li>
                         </ul>

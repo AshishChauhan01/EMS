@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('Home.home');
 });
 
+
+
 Route::prefix('login')->group(function () {
     Route::get('employee', function () {
         return view('login.employee');
@@ -26,6 +28,7 @@ Route::prefix('login')->group(function () {
     })->name('adminLogin');
 });
 
-Route::get('dashboard', function () {
-    return view('employee.dashboard');
+Route::prefix('employee')->group(function () {
+    Route::view('dashboard', 'employee.dashboard');
+    Route::view('department', 'employee.department.index');
 });
