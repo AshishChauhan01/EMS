@@ -123,6 +123,9 @@ body {
     .side-bar {
         background-color: #1e272b;
         min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
         .logo-div {
             background-color: #257b6e;
             width: 100%;
@@ -174,19 +177,39 @@ body {
                         }
                     }
                     &.active {
-                        background-color: var(--main-color);
+                        background-color: #2a363a;
+                        padding-bottom: 0px;
+                        a {
+                            display: inline-block;
+                            margin-bottom: 10px;
+                        }
                         &::before {
                             rotate: 135deg;
                             top: 20px;
                         }
+                        ul {
+                            display: block;
+                            li {
+                                &:hover {
+                                    background-color: #1e272b;
+                                }
+                                a {
+                                    display: inline;
+                                }
+                            }
+                        }
                     }
                     &:hover {
                         background-color: #2a363a;
+                        ul {
+                            display: block;
+                        }
                     }
                     ul {
+                        display: none;
+                        margin: 0 -20px;
                         li {
-                            margin-left: 12px;
-                            padding-bottom: 0px;
+                            padding: 6px 20px 6px 44px;
                         }
                     }
                 }
@@ -307,5 +330,31 @@ body {
         border: 1px solid var(--secondry-color);
         border-left: 0px;
         border-right: 0px;
+    }
+}
+
+.form-box {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    h4 {
+        text-align: center;
+        border-bottom: 1px solid var(--secondry-color);
+        padding-bottom: 16px;
+    }
+    label {
+        font-weight: 600;
+        color: rgba($color: #000000, $alpha: 0.75);
+    }
+    input {
+        outline: 0;
+        &::placeholder {
+            color: rgba($color: #000000, $alpha: 0.45);
+            font-weight: 500;
+        }
+        &:focus {
+            box-shadow: unset;
+            outline: 1px solid var(--main-color);
+        }
     }
 }

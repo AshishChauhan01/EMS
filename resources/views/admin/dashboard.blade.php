@@ -1,7 +1,7 @@
 @php
 $page = 'dashboard';
 @endphp
-@extends('employee.layout')
+@extends('admin.layout')
 @section('title', 'EMS - Dashboard')
 @section('page-title')
     <div class="title-section">

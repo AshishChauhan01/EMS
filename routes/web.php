@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontEndController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,10 @@ Route::prefix('login')->group(function () {
     })->name('adminLogin');
 });
 
-Route::prefix('employee')->group(function () {
-    Route::view('dashboard', 'employee.dashboard');
-    Route::view('department', 'employee.department.index');
+Route::prefix('admin')->group(function () {
+    Route::view('/', 'admin.dashboard');
+    Route::view('department', 'admin.department.index');
+    Route::view('add-department', 'admin.department.add_department');
 });
+
+Route::post('save-department', [FrontEndController::class, 'addDepartment']);

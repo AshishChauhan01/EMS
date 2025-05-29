@@ -3,15 +3,15 @@
     <div class="main-pannel">
         <div class="side-bar left-side-section">
             <div class="logo-div">
-                <h2 class="logo-text">EMS - Employee</h2>
+                <h2 class="logo-text">EMS - Admin</h2>
             </div>
             <div class="side-menu">
                 <ul>
-                    <li class="{{($page == 'dashboard')?'active':'';}}"><a href="{{url('employee/dashboard')}}"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
-                    <li class="has-child {{($page == 'department')?'active':'';}}"><a href="{{url('employee/department')}}"><i class="fa-solid fa-building"></i>Department</a>
-                        <ul class="d-none">
-                            <li><a href="#">Department 1</a></li>
-                            <li><a href="#">Department 2</a></li>
+                    <li class="{{($page == 'dashboard')?'active':'';}}"><a href="{{url('admin')}}"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+                    <li class="has-child {{($page == 'department')?'active':'';}}"><a href="{{url('admin/department')}}"><i class="fa-solid fa-building"></i>Department</a>
+                        <ul>
+                            <li><a href="{{url('admin/add-department')}}"><i class="fa-solid fa-building-user"></i>Add Department</a></li>
+                            <li><a href="#"><i class="fa-solid fa-user-gear"></i>Manage Department</a></li>
                         </ul>
                     </li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-file-lines"></i>Leave Type</a></li>
