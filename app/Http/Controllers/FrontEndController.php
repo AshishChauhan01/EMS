@@ -20,4 +20,9 @@ class FrontEndController extends Controller
             return redirect()->back()->with('error', 'fail to add data');
         }
     }
+    public function manageDepartment()
+    {
+        $departments = DB::table('departments')->orderBy('department_name')->get();
+        return view('admin.department.manage_department', ['departments' => $departments]);
+    }
 }

@@ -33,6 +33,6 @@ Route::prefix('admin')->group(function () {
     Route::view('/', 'admin.dashboard');
     Route::view('department', 'admin.department.index');
     Route::view('add-department', 'admin.department.add_department');
+    Route::get('manage-department', [FrontEndController::class, 'manageDepartment']);
+    Route::post('save-department', [FrontEndController::class, 'addDepartment']);
 });
-
-Route::post('save-department', [FrontEndController::class, 'addDepartment']);

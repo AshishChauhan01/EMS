@@ -11,7 +11,7 @@
                     <li class="has-child {{($page == 'department')?'active':'';}}"><a href="{{url('admin/department')}}"><i class="fa-solid fa-building"></i>Department</a>
                         <ul>
                             <li><a href="{{url('admin/add-department')}}"><i class="fa-solid fa-building-user"></i>Add Department</a></li>
-                            <li><a href="#"><i class="fa-solid fa-user-gear"></i>Manage Department</a></li>
+                            <li><a href="{{url('admin/manage-department')}}"><i class="fa-solid fa-user-gear"></i>Manage Department</a></li>
                         </ul>
                     </li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-file-lines"></i>Leave Type</a></li>

@@ -16,7 +16,7 @@
                 @endif
                 <div class="form-box">
                     <h4>Add Department</h4>
-                    <form action="{{url('save-department')}}" method="POST">
+                    <form action="{{url('admin/save-department')}}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="department" class="form-label">Department Name</label>
