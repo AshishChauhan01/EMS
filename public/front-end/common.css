@@ -144,6 +144,7 @@ body {
   list-style: none;
   padding: 12px 20px;
   cursor: pointer;
+  line-height: 28px;
 }
 .main-pannel .side-bar .side-menu ul li a {
   text-decoration: none;
@@ -173,11 +174,9 @@ body {
 }
 .main-pannel .side-bar .side-menu ul li.active {
   background-color: #2a363a;
-  padding-bottom: 0px;
 }
 .main-pannel .side-bar .side-menu ul li.active a {
   display: inline-block;
-  margin-bottom: 10px;
 }
 .main-pannel .side-bar .side-menu ul li.active::before {
   rotate: 135deg;
@@ -185,6 +184,7 @@ body {
 }
 .main-pannel .side-bar .side-menu ul li.active ul {
   display: block;
+  margin-bottom: -12px;
 }
 .main-pannel .side-bar .side-menu ul li.active ul li:hover {
   background-color: #1e272b;
@@ -247,7 +247,7 @@ body {
 .main-pannel-content {
   padding: 20px;
   background-color: rgba(177, 177, 177, 0.1);
-  min-height: calc(100vh - 124px);
+  min-height: calc(100vh - 50px);
 }
 
 .title-section {
@@ -319,32 +319,32 @@ body {
   border-right: 0px;
 }
 
-.form-box {
+.data-section {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px;
 }
-.form-box h4 {
+.data-section h4 {
   text-align: center;
   border-bottom: 1px solid var(--secondry-color);
   padding-bottom: 16px;
 }
-.form-box label {
+.data-section label {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.75);
 }
-.form-box input {
+.data-section input {
   outline: 0;
 }
-.form-box input::-moz-placeholder {
+.data-section input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.45);
   font-weight: 500;
 }
-.form-box input::placeholder {
+.data-section input::placeholder {
   color: rgba(0, 0, 0, 0.45);
   font-weight: 500;
 }
-.form-box input:focus {
+.data-section input:focus {
   box-shadow: unset;
   outline: 1px solid var(--main-color);
 }/*# sourceMappingURL=common.css.map */

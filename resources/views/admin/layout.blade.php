@@ -11,10 +11,15 @@
                     <li class="has-child {{($page == 'department')?'active':'';}}"><a href="{{url('admin/department')}}"><i class="fa-solid fa-building"></i>Department</a>
                         <ul>
                             <li><a href="{{url('admin/add-department')}}"><i class="fa-solid fa-building-user"></i>Add Department</a></li>
-                            <li><a href="{{url('admin/manage-department')}}"><i class="fa-solid fa-user-gear"></i>Manage Department</a></li>
+                            <li><a href="{{route('manage-department')}}"><i class="fa-solid fa-user-gear"></i>Manage Department</a></li>
                         </ul>
                     </li>
-                    <li class="has-child"><a href="#"><i class="fa-solid fa-file-lines"></i>Leave Type</a></li>
+                    <li class="has-child {{$page == 'leave'?'active':''}}"><a href="javascript:;"><i class="fa-solid fa-file-lines"></i>Leave Type</a>
+                        <ul>
+                            <li><a href="{{url('admin/add-leave')}}"><i class="fa-solid fa-building-user"></i>Add Leave</a></li>
+                            <li><a href="{{url('admin/manage-leave')}}"><i class="fa-solid fa-user-gear"></i>Manage Leave</a></li>
+                        </ul>
+                    </li>
                     <li class="has-child"><a href="#"><i class="fa-regular fa-circle-user"></i>Employee</a></li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-indian-rupee-sign"></i>Salary</a></li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-hand"></i>Leave Requests</a></li>

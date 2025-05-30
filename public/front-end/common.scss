@@ -148,7 +148,7 @@ body {
                     list-style: none;
                     padding: 12px 20px;
                     cursor: pointer;
-
+                    line-height: 28px;
                     a {
                         text-decoration: none;
                         color: #fff;
@@ -178,10 +178,10 @@ body {
                     }
                     &.active {
                         background-color: #2a363a;
-                        padding-bottom: 0px;
+                        // padding-bottom: 0px;
                         a {
                             display: inline-block;
-                            margin-bottom: 10px;
+                            // margin-bottom: 10px;
                         }
                         &::before {
                             rotate: 135deg;
@@ -189,6 +189,7 @@ body {
                         }
                         ul {
                             display: block;
+                            margin-bottom: -12px;
                             li {
                                 &:hover {
                                     background-color: #1e272b;
@@ -260,9 +261,11 @@ body {
 .main-pannel-content {
     padding: 20px;
     background-color: rgba($color: #b1b1b1, $alpha: 0.1);
-    min-height: calc(100vh - 124px);
+    min-height: calc(100vh - 50px);
 }
-
+.page-title {
+    // min-height: calc(100vh - 124px);
+}
 .title-section {
     padding: 20px;
     display: flex;
@@ -333,7 +336,7 @@ body {
     }
 }
 
-.form-box {
+.data-section {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
