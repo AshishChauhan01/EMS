@@ -20,7 +20,12 @@
                             <li><a href="{{url('admin/manage-leave')}}"><i class="fa-solid fa-user-gear"></i>Manage Leave</a></li>
                         </ul>
                     </li>
-                    <li class="has-child"><a href="#"><i class="fa-regular fa-circle-user"></i>Employee</a></li>
+                    <li class="has-child {{$page == 'employee'?'active':''}}"><a href="#"><i class="fa-regular fa-circle-user"></i>Employee</a>
+                        <ul>
+                            <li><a href="{{url('admin/add-employee')}}"><i class="fa-solid fa-building-user"></i>Add Employee</a></li>
+                            <li><a href="{{url('admin/manage-employee')}}"><i class="fa-solid fa-user-gear"></i>Manage Employee</a></li>
+                        </ul>
+                    </li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-indian-rupee-sign"></i>Salary</a></li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-hand"></i>Leave Requests</a></li>
                     <li class="has-child"><a href="#"><i class="fa-solid fa-flag"></i>Report</a></li>

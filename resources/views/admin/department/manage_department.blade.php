@@ -44,6 +44,9 @@ $page = 'department';
                         </tbody>
                     </table>
                 </div>
+                <div class="mt-4">
+                {{ $departments->links() }}   
+                </div>
            </div>
         </div>
     </div>

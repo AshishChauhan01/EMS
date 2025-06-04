@@ -22,7 +22,7 @@ class FrontEndController extends Controller
     }
     public function manageDepartment()
     {
-        $departments = DB::table('departments')->orderBy('department_name')->paginate();
+        $departments = DB::table('departments')->orderBy('department_name')->paginate(10, ['*'], 'departments'); //here in paginate argument first take no of record on a page second what data i want to show and third is url name
         return view('admin.department.manage_department', ['departments' => $departments]);
     }
     public function viewDepartment($id)
@@ -73,7 +73,7 @@ class FrontEndController extends Controller
     }
     public function manageLeave()
     {
-        $leaves = DB::table('leaves')->get();
+        $leaves = DB::table('leaves')->paginate(10);
         return view('admin.leave.manage_leave', compact('leaves'));
     }
 
@@ -103,5 +103,11 @@ class FrontEndController extends Controller
         } else {
             return redirect()->back()->with('error', 'Leave Type not remove');
         }
+    }
+
+    public function addEmployee()
+    {
+        $departments = DB::table('departments')->orderBy('department_name')->get();
+        return view('admin.employee.add_employee', compact('departments'));
     }
 }

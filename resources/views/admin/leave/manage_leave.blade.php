@@ -1,5 +1,5 @@
 @php
-$page = 'department';
+$page = 'leave';
 @endphp
 @extends('admin.layout')
 @section('title', 'EMS - Department')
@@ -43,6 +43,9 @@ $page = 'department';
                             @endforeach
                         </tbody>
                     </table>
+                </div>
+                <div>
+                    {{$leaves->links()}}
                 </div>
            </div>
         </div>

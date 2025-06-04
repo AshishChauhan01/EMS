@@ -46,4 +46,6 @@ Route::prefix('admin')->group(function () {
     Route::get('edit-leave/{id}', [FrontEndController::class, 'editLeave']);
     Route::put('update-leave/{id}', [FrontEndController::class, 'updateLeave']);
     Route::get('delete-leave/{id}', [FrontEndController::class, 'deleteLeave']);
+
+    Route::get('add-employee', [FrontEndController::class, 'addEmployee']);
 });
